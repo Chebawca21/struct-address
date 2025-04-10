@@ -1,0 +1,10 @@
+services:
+  structaddress:
+    image: structaddress
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - GROQ_API_KEY="user_api_key"
