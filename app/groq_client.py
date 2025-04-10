@@ -19,8 +19,3 @@ class GroqClient:
 
         ai_msg = await self.llm.ainvoke(messages)
         return ai_msg
-
-# groq = GroqClient()
-
-# json = asyncio.run(groq.struct_address("Aleksandra Nowak ul. Kwiatowa 17/5 50-123 Wrocław"))
-# print(json)

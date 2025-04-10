@@ -11,9 +11,7 @@ processes = {}
 
 async def ask_llm(address, uuid):
     process = processes[uuid]
-    process.address = Address(name="Aleksandra Nowak", street="ul. Kwiatowa", house_number="17/5", postcode="50-123", city="Wrocław", voivodeship="Dolnośląskie")
-    await asyncio.sleep(5)
-    # process.address = await groq.struct_address(address)
+    process.address = await groq.struct_address(address)
     process.status = Status.done
     processes[uuid] = process
 
