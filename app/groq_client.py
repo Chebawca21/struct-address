@@ -1,4 +1,3 @@
-import asyncio
 from langchain_groq import ChatGroq
 from app.models import Address
 
