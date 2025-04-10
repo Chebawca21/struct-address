@@ -1,0 +1,11 @@
+#!/bin/bash
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Wies%C5%82awa%20Frano%20ul.%20Kwiatowa%2017%2F5%2050-123%20dolno%C5%9Bl%C4%85skie' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Pawe%C5%82%20Bandura%20ul.%20Boles%C5%82awa%20Chrobrego%20145%2042-500%20B%C4%99dzin' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Iwona%20Bagi%C5%84ska%20ul.%20Go%C5%82%C4%99bia%203%2015-336%20Bia%C5%82ystok' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Bernard%20K%C4%85tny%20ul.%20J.%20Hallera%2011%20%2007-412%20Ostro%C5%82%C4%99ka' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Antonina%20Duczy%C5%84ska%20ul.%20Podjazd%2078%2081-805%20Sopot' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Izydor%20Jagodzi%C5%84ski%20ul.%20Kili%C5%84skiego%20Jana%20133%2085-670%20Bydgoszcz' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Judyta%20Cis%C5%82o%20%20ul.%20Moniuszki%20Stanis%C5%82awa%2054%2041-406%20Mys%C5%82owice' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Klara%20Sugalska%20ul.%20Zakr%C4%99t%2093%2002-907' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Bartosz%20Kaczmarski%20ul.%20Wiejska%2017%2044-338%20Jastrz%C4%99bie-zdr%C3%B3j' -H 'accept: application/json' -d ''
+curl -X 'POST' 'http://127.0.0.1:8000/struct?adr=Stefan%20%C5%BBaczek%20ul.%20Morcinka%20Gustawa%20143%2040-124' -H 'accept: application/json' -d ''

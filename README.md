@@ -18,3 +18,9 @@ When container is running run
 ```
 docker-compose exec structaddress pytest
 ```
+
+### Sending multiple requests
+File test.sh contains 10 requests for different addresses
+```
+./test.sh
+```
