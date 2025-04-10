@@ -10,7 +10,7 @@ class Address(BaseModel):
     house_number: Union[str, None] = Field(description="House number")
     postcode: Union[str, None] = Field(description="Polish postcode")
     city: Union[str, None] = Field(description="Name of the city, if no city name is provided deduce it from postcode")
-    voivodeship: Union[str, None] = Field(description="Voivodeship, if none is provided deduce it from city or postcode")
+    voivodeship: Union[str, None] = Field(description="Name of the voivodeship which is not capitalised, if none is provided deduce it from city or postcode")
 
 class Status(str, Enum):
     unknown = "UNKNOWN"
