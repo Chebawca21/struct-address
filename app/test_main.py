@@ -29,10 +29,11 @@ def test_struct():
                               "uuid": 0}
 
 def test_struct_address():
-    client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 Wrocław dolnośląskie'})
-    response = client.get("/result/0")
+    response = client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 Wrocław dolnośląskie'})
+    id = response.json()["uuid"]
+    response = client.get(f"/result/{id}")
     assert response.status_code == 200
-    assert response.json() == {"uuid": 0,
+    assert response.json() == {"uuid": id,
                                "status": "DONE",
                                "imie_nazwisko": "Aleksandra Nowak",
                                "ulica": "ul. Kwiatowa",
@@ -43,10 +44,11 @@ def test_struct_address():
                                }
 
 def test_missing_voivodeship():
-    client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 Wrocław'})
-    response = client.get("/result/0")
+    response = client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 Wrocław'})
+    id = response.json()["uuid"]
+    response = client.get(f"/result/{id}")
     assert response.status_code == 200
-    assert response.json() == {"uuid": 0,
+    assert response.json() == {"uuid": id,
                                "status": "DONE",
                                "imie_nazwisko": "Aleksandra Nowak",
                                "ulica": "ul. Kwiatowa",
@@ -57,10 +59,11 @@ def test_missing_voivodeship():
                                }
 
 def test_missing_city():
-    client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 dolnośląskie'})
-    response = client.get("/result/0")
+    response = client.post("/struct", params={'adr': 'Aleksandra Nowak ul. Kwiatowa 17/5 50-123 dolnośląskie'})
+    id = response.json()["uuid"]
+    response = client.get(f"/result/{id}")
     assert response.status_code == 200
-    assert response.json() == {"uuid": 0,
+    assert response.json() == {"uuid": id,
                                "status": "DONE",
                                "imie_nazwisko": "Aleksandra Nowak",
                                "ulica": "ul. Kwiatowa",

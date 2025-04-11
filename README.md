@@ -16,7 +16,7 @@ To view swagger UI go [here](http://127.0.0.1:8000/docs)
 ### Pytest
 When container is running run
 ```
-docker-compose exec structaddress pytest
+docker-compose exec structaddress pytest -vv
 ```
 
 ### Sending multiple requests
